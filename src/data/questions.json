@@ -1,0 +1,175 @@
+{
+"questions":[
+  {
+    "question": "What is React?",
+    "options": [
+      "A backend framework",
+      "A JavaScript library for building UI",
+      "A database",
+      "A CSS framework"
+    ],
+    "correctAnswer": "A JavaScript library for building UI",
+    "points": 10
+  },
+  {
+    "question": "Which hook is used to manage state in a functional component?",
+    "options": ["useEffect", "useContext", "useState", "useReducer"],
+    "correctAnswer": "useState",
+    "points": 10
+  },
+  {
+    "question": "What is JSX?",
+    "options": [
+      "A template engine",
+      "JavaScript XML syntax",
+      "A CSS preprocessor",
+      "A database query language"
+    ],
+    "correctAnswer": "JavaScript XML syntax",
+    "points": 10
+  },
+  {
+    "question": "Which method is used to render lists in React?",
+    "options": ["forEach()", "map()", "filter()", "reduce()"],
+    "correctAnswer": "map()",
+    "points": 10
+  },
+  {
+    "question": "What causes a React component to re-render?",
+    "options": [
+      "Changing local variables",
+      "Updating state or props",
+      "Calling a function",
+      "Using console.log"
+    ],
+    "correctAnswer": "Updating state or props",
+    "points": 10
+  },
+  {
+    "question": "How do you pass data from parent to child component?",
+    "options": ["State", "Props", "Context", "Refs"],
+    "correctAnswer": "Props",
+    "points": 10
+  },
+  {
+    "question": "Which hook is used for side effects?",
+    "options": ["useState", "useReducer", "useEffect", "useRef"],
+    "correctAnswer": "useEffect",
+    "points": 10
+  },
+  {
+    "question": "What is the virtual DOM?",
+    "options": [
+      "A copy of the real DOM in memory",
+      "A browser API",
+      "A database",
+      "A JavaScript engine"
+    ],
+    "correctAnswer": "A copy of the real DOM in memory",
+    "points": 10
+  },
+  {
+    "question": "Which attribute is used to uniquely identify elements in a list?",
+    "options": ["id", "index", "key", "name"],
+    "correctAnswer": "key",
+    "points": 10
+  },
+  {
+    "question": "What is the default behavior of React state updates?",
+    "options": ["Synchronous", "Asynchronous", "Blocking", "Immutable"],
+    "correctAnswer": "Asynchronous",
+    "points": 10
+  },
+  {
+    "question": "Which hook is best for complex state logic?",
+    "options": ["useState", "useEffect", "useReducer", "useMemo"],
+    "correctAnswer": "useReducer",
+    "points": 10
+  },
+  {
+    "question": "What does lifting state up mean?",
+    "options": [
+      "Moving state to child",
+      "Moving state to common parent",
+      "Deleting state",
+      "Using context"
+    ],
+    "correctAnswer": "Moving state to common parent",
+    "points": 10
+  },
+  {
+    "question": "Which hook helps prevent unnecessary re-renders?",
+    "options": ["useCallback", "useEffect", "useState", "useReducer"],
+    "correctAnswer": "useCallback",
+    "points": 10
+  },
+  {
+    "question": "What is React.memo used for?",
+    "options": [
+      "Memoizing values",
+      "Memoizing functions",
+      "Preventing unnecessary re-renders",
+      "Handling side effects"
+    ],
+    "correctAnswer": "Preventing unnecessary re-renders",
+    "points": 10
+  },
+  {
+    "question": "Which hook stores a mutable value without re-rendering?",
+    "options": ["useState", "useEffect", "useRef", "useReducer"],
+    "correctAnswer": "useRef",
+    "points": 10
+  },
+  {
+    "question": "What is the purpose of Context API?",
+    "options": [
+      "Managing local state",
+      "Passing data without prop drilling",
+      "Handling HTTP requests",
+      "Styling components"
+    ],
+    "correctAnswer": "Passing data without prop drilling",
+    "points": 10
+  },
+  {
+    "question": "Which lifecycle is replaced by useEffect?",
+    "options": [
+      "componentDidMount",
+      "componentDidUpdate",
+      "componentWillUnmount",
+      "All of the above"
+    ],
+    "correctAnswer": "All of the above",
+    "points": 10
+  },
+  {
+    "question": "What is the correct way to update state based on previous state?",
+    "options": [
+      "setState(state + 1)",
+      "setState(prev => prev + 1)",
+      "state++",
+      "updateState()"
+    ],
+    "correctAnswer": "setState(prev => prev + 1)",
+    "points": 10
+  },
+  {
+    "question": "Which tool is commonly used for routing in React?",
+    "options": ["Redux", "Axios", "React Router", "Next.js"],
+    "correctAnswer": "React Router",
+    "points": 10
+  },
+  {
+    "question": "What does controlled component mean?",
+    "options": [
+      "Component controlled by browser",
+      "Component controlled by React state",
+      "Component with no state",
+      "Component using refs"
+    ],
+    "correctAnswer": "Component controlled by React state",
+    "points": 10
+}
+]
+}
+
