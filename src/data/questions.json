@@ -118,7 +118,7 @@
     "question": "Which hook stores a mutable value without re-rendering?",
     "options": ["useState", "useEffect", "useRef", "useReducer"],
     "correctAnswer": "useRef",
-    "points": 10
+    "points": 20
   },
   {
     "question": "What is the purpose of Context API?",
@@ -168,7 +168,7 @@
       "Component using refs"
     ],
     "correctAnswer": "Component controlled by React state",
-    "points": 10
+    "points": 20
 }
 ]
 }
