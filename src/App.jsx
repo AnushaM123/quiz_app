@@ -1,4 +1,5 @@
 import { useEffect, useReducer } from "react";
+
 import Header from "./components/Header.jsx";
 import Main from "./components/Main.jsx";
 import Loader from "./components/Loader.jsx";
@@ -7,6 +8,9 @@ import StartScreen from "./components/StartScreen.jsx";
 import Question from "./components/Question.jsx";
 import QuizCompleted from "./components/QuizCompleted.jsx";
 import ProgressIndicator from "./components/ProgressIndicator.jsx";
+import Next from "./components/Next.jsx";
+import Footer from "./components/Footer.jsx";
+import Timer from "./components/Timer.jsx";
 
 function App() {
   const initialState = {
@@ -14,7 +18,8 @@ function App() {
     status: "loading", //"loading", "ready", "error", "active", "finished", "restart"
     index: 0,
     answer: null,
-    points: 0
+    points: 0,
+    secondsRemaining: 300
   };
 
 
@@ -54,6 +59,12 @@ function App() {
           answer: null,
           status: state.index < state.questions.length - 1 ? "active" : "finished",
         };
+      case "tick":
+        return {
+          ...state,
+          secondsRemaining: state.secondsRemaining > 0 ? state.secondsRemaining - 1 : 0,
+          status: state.secondsRemaining === 0 ? "finished" : "active",
+        };
       case "restart":
         return {
           ...initialState,
@@ -89,7 +100,7 @@ function App() {
   }, [restart]);
 
   
-  const { questions,answer,points, index } = state;
+  const { questions,answer,points, index,secondsRemaining } = state;
 
   const numQuestions = questions.length;
   const totalPoints = questions.reduce((sum, q) => sum + q.points, 0);
@@ -102,11 +113,15 @@ function App() {
         {state.status === "error" && <Error />}
         {state.status === "ready"  &&<StartScreen numQuestions={numQuestions} dispatch={dispatch} />}
         {state.status === "active" && <>
-          <ProgressIndicator index={index + 1} numQuestions={numQuestions} points={points} totalPoints={totalPoints} />
+          <ProgressIndicator index={index} numQuestions={numQuestions} points={points} totalPoints={totalPoints} />
           <Question question={questions[index]} dispatch={dispatch} answer={answer} />
         </>}
         {state.status === "finished" && <QuizCompleted points={points} numQuestions={numQuestions} dispatch={dispatch} />}
       </Main>
+      {state.status === 'active' && <Footer>
+        <Timer secondsRemaining={secondsRemaining} dispatch={dispatch} />
+        <Next dispatch={dispatch} answer={answer} />
+      </Footer>}
     </>
   );
 }
