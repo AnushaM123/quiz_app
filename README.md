@@ -112,25 +112,24 @@ src/
 
 ## Getting Started
 
-# 1. Clone the repository:
+### 1. Clone the repository:
 ```bash
 git clone https://https://github.com/AnushaM123/quiz_app
 
-
-# 2. Install dependencies:
+2. Install dependencies:
 npm install
 
-# 3. Start the developer server
+3. Start the developer server
 npm run dev
 
-# 4. Start the API server
+4. Start the API server
 npm run server
 
-# 5. Ensure the API server is running:
+5. Ensure the API server is running:
 http://localhost:8000/questions
 
 
-# Key Takeaway
+Key Takeaway
 
 This project helped me understand when useReducer is a better choice than useState, especially for applications with multiple related state changes and clear workflows.
 
