@@ -15,7 +15,7 @@ function Timer({ secondsRemaining, dispatch }) {
 
     return (
         <div className="pt-4">
-            <span className={`${timeOut ? "text-red-600" : "text-black fot bg-gray-400 p-2 text-center rounded-2xl"}`}>{`${timeOut ? "Time Out!" : `${mins}:${secs < 10 ? `0${secs}` : secs}`}`}</span>
+            <span className={`${timeOut ? "text-red-600" : "text-black fot bg-gray-400 px-6 py-2 text-center rounded-2xl"}`}>{`${timeOut ? "Time Out!" : `${mins}:${secs < 10 ? `0${secs}` : secs}`}`}</span>
         </div>
     );
 }
